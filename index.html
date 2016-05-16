@@ -5,11 +5,79 @@
 	<title>XXX公司</title>
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="script/myMove.js"></script>
+	<script type="text/javascript">
+		window.onload = function (){
+			var oPro = document.getElementById('pro');
+			oPro.innerHTML = oPro.innerHTML + oPro.innerHTML;
+			var oPics = getByClass(oPro,'div','pro_show');
+			var oButtonMoveLeft = document.getElementById('moveleft');
+			var oButtonMoveRight = document.getElementById('moveright');
+			var picWidth = parseInt(getStyle(oPics[0],'width')) + 17;
+			oPro.style.width = picWidth * (oPics.length) + 'px';
+
+			var picIndex = 0;
+
+			oButtonMoveLeft.onmouseover = function(){
+				startMove(oButtonMoveLeft,'opacity',100);
+			}
+
+			oButtonMoveLeft.onmouseout = function(){
+				startMove(oButtonMoveLeft,'opacity',60);
+			}
+
+			oButtonMoveRight.onmouseover = function(){
+				startMove(oButtonMoveRight,'opacity',100);
+			}
+
+			oButtonMoveRight.onmouseout = function(){
+				startMove(oButtonMoveRight,'opacity',60);
+			}
+
+			oButtonMoveLeft.onclick = function(){
+				picIndex--;
+				if(picIndex==-5){
+					oPro.style.left = 0;
+					picIndex=-1;
+				}
+				startMove(oPro,'left',picIndex*picWidth);
+			}
+
+			oButtonMoveRight.onclick = function(){
+				picIndex++;
+				if(picIndex==1){
+					oPro.style.left = -4*picWidth + 'px';
+					picIndex=-3;
+				}
+				startMove(oPro,'left',picIndex*picWidth);
+			}
+
+
+		}
+
+		function getByClass(obj,tagName,className){
+			if(obj.getElementsByClassName(className)){
+				return obj.getElementsByClassName(className);
+			}else{
+				var arrClass = [];
+				var arrTag = obj.getElementsByTagName(tagName);
+				for(var i = 0;i<arrTag.length;i++){
+					if (arrTag[i].class = className) {
+						arrClass.push(arrTag[i]);
+						alert(arrClass.class);
+					}
+				}
+				return arrClass;
+			}
+			
+		}
+		
+	</script>
 </head>
 <body>
 	<header>
 		<div id="topHeader">
-			<h1>LOGO</h1>
+			<h1><a href="#">LOGO</a></h1>
 			<nav id="header">
 				<ul>
 					<a href="#"><li>首页</li></a>
@@ -96,11 +164,11 @@
 					<div id="pro_show4"></div>
 					<p>国家开发银行福建省分行</p>
 				</div>
-			</div>
-			<div id="pro_button">
+			</div>			
+		</div>
+		<div id="pro_button">
 				<div id="moveleft"></div>
 				<div id="moveright"></div>
-			</div>
 		</div>
 		<div id="news_container">
 			<div id="news_title">
