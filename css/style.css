@@ -209,6 +209,7 @@ header a{
 .pro_show{
 	float: left;
 	margin-right:17px;
+	width: 237px;
 }
 
 .pro_show:last-child{
