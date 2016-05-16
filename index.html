@@ -15,24 +15,53 @@
 			var oButtonMoveRight = document.getElementById('moveright');
 			var picWidth = parseInt(getStyle(oPics[0],'width')) + 17;
 			oPro.style.width = picWidth * (oPics.length) + 'px';
+			var timer = null;
 
 			var picIndex = 0;
 
+			function autoMove(){
+				var timerMove = setInterval(function(){
+						picIndex--;
+						if(picIndex==-5){
+							oPro.style.left = 0;
+							picIndex=-1;
+						}
+						startMove(oPro,'left',picIndex*picWidth);
+				},2000);
+				return timerMove;
+			}
+
+			timer = autoMove();
+
+			oPro.onmouseover = function(){
+				clearInterval(timer);
+			}
+
+			oPro.onmouseout = function(){
+				timer = autoMove();
+			}
+			
 			oButtonMoveLeft.onmouseover = function(){
+				clearInterval(timer);
 				startMove(oButtonMoveLeft,'opacity',100);
 			}
 
 			oButtonMoveLeft.onmouseout = function(){
+				timer = autoMove();
 				startMove(oButtonMoveLeft,'opacity',60);
 			}
 
 			oButtonMoveRight.onmouseover = function(){
+				clearInterval(timer);
 				startMove(oButtonMoveRight,'opacity',100);
 			}
 
 			oButtonMoveRight.onmouseout = function(){
+				timer = autoMove();
 				startMove(oButtonMoveRight,'opacity',60);
 			}
+
+			
 
 			oButtonMoveLeft.onclick = function(){
 				picIndex--;
@@ -52,7 +81,6 @@
 				startMove(oPro,'left',picIndex*picWidth);
 			}
 
-
 		}
 
 		function getByClass(obj,tagName,className){
@@ -68,9 +96,10 @@
 					}
 				}
 				return arrClass;
-			}
-			
+			}			
 		}
+
+		
 		
 	</script>
 </head>
