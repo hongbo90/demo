@@ -63,7 +63,7 @@
 
 			
 
-			oButtonMoveLeft.onclick = function(){
+			oButtonMoveRight.onclick = function(){
 				picIndex--;
 				if(picIndex==-5){
 					oPro.style.left = 0;
@@ -72,7 +72,7 @@
 				startMove(oPro,'left',picIndex*picWidth);
 			}
 
-			oButtonMoveRight.onclick = function(){
+			oButtonMoveLeft.onclick = function(){
 				picIndex++;
 				if(picIndex==1){
 					oPro.style.left = -4*picWidth + 'px';
