@@ -76,7 +76,7 @@ header a{
 #main_title{
 	text-align: center;
 	margin: 0 auto;
-	font-size: 30px;
+	font-size: 2em;
 }
 
 .intro{
@@ -206,6 +206,7 @@ header a{
 .pro_show{
 	float: left;
 	margin-right:8px;
+	width: 180px;
 }
 
 .pro_show:last-child{
@@ -221,25 +222,21 @@ header a{
 #pro_show1{
 	background: url(../img/shanghai.png);
 	height: 134px;
-	width: 180px;	
 }
 
 #pro_show2{
 	background: url(../img/fitcenter.png);
 	height: 134px;
-	width: 180px;	
 }
 
 #pro_show3{
 	background: url(../img/bank1.png);
 	height: 134px;
-	width: 180px;	
 }
 
 #pro_show4{
 	background: url(../img/bank2.png);
 	height: 134px;
-	width: 180px;	
 }
 
 #moveleft{
@@ -353,7 +350,7 @@ footer{
 	margin: auto;
 	width: 750px;
 	overflow: hidden;	
-	padding-bottom: 31px;
+	padding-bottom: 10px;
 	color: #C4C4C4;
 }
 
