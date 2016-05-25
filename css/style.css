@@ -41,6 +41,11 @@ header{
 	margin-left: 12px;
 }
 
+#newformobile{
+	color: red;
+	font-style: bold;
+}
+
 #header li:hover{
 	background: red;
 	color:white;

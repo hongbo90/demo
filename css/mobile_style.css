@@ -105,6 +105,10 @@ nav li{
 	margin-left: 0.6rem;
 }
 
+#newformobile{
+	color: red;
+}
+
 #container{
 	width: 32rem;
 	margin: 0 auto;
