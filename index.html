@@ -8,6 +8,18 @@
 	<script type="text/javascript" src="script/myMove.js"></script>
 	<script type="text/javascript">
 		window.onload = function (){
+
+			var str = window.location.href;
+			if(str.indexOf('?')==-1){
+				if(window.innerWidth<1000){
+				window.location.href='m.index.html';
+				}
+			}
+
+			
+			
+			
+
 			var oPro = document.getElementById('pro');
 			oPro.innerHTML = oPro.innerHTML + oPro.innerHTML;
 			var oPics = getByClass(oPro,'div','pro_show');
