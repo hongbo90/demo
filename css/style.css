@@ -13,7 +13,8 @@ a:visited{
 }
 
 #container{
-	width: 1000px;
+	width: 100%;
+	min-width: 1000px;
 	margin: 0 auto;
 }
 
@@ -21,8 +22,13 @@ header a{
 	color: #000000;
 }
 
-#topHeader{
+header{
 	width: 100%;
+}
+
+#topHeader{
+	width: 1000px;
+	text-align: center;
 	margin:0 auto;
 }
 
@@ -43,7 +49,6 @@ header a{
 
 
 #header ul{
-	margin-left: 200px;
 	height: 50px;
 
 }
@@ -56,22 +61,18 @@ header a{
 }
 
 #banner{
-	overflow: hidden;
+	margin: 0 auto;
 }
 
 #banner1{
 	background: url(../img/banner1.png);
-	height: 256px;
-	width: 500px;
-	float: left;
+	min-height: 350px;
+	min-width: 1000px;
+	max-width: 1161px;
+	max-height: 410px;
+	margin: 0 auto;
 }
 
-#banner2{
-	background: url(../img/banner1.png);
-	height: 256px;
-	width: 500px;
-	float: right;
-}
 
 #main_title{
 	text-align: center;
