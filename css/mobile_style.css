@@ -1,0 +1,203 @@
+@media screen and (min-width: 640px) {
+	html{
+	font-size: 20px;
+	}
+
+	#banner1{
+		background: url(../img/ipad_banner1.png);
+	}
+
+	#banner2{
+		background: url(../img/ipad_banner2.png);
+	}
+
+	#ico1{
+	background: url(../img/ico1.png);
+	}
+
+	#ico2{
+		background: url(../img/ico2.png);
+	}
+
+	#ico3{
+		background: url(../img/ico3.png);
+	}
+
+	#ico4{
+		background: url(../img/ico4.png);
+	}
+
+}
+
+@media screen and (max-width: 639px){
+	html{
+		font-size: 12px;
+	}
+
+	#banner1{
+		background: url(../img/mobile_banner1.png);
+	}
+
+	#banner2{
+		background: url(../img/mobile_banner2.png);
+	}
+
+	#ico1{
+		background: url(../img/mobile_ico1.png);
+	}
+
+	#ico2{
+		background: url(../img/mobile_ico2.png);
+	}
+
+	#ico3{
+		background: url(../img/mobile_ico3.png);
+	}
+
+	#ico4{
+		background: url(../img/mobile_ico4.png);
+	}
+}
+
+html{
+	font-family: Microsoft YaHei;
+}
+
+body{
+	font-size: 0.8rem;
+}
+
+a{
+	text-decoration:none;
+	color: #000000;
+}
+
+header{
+	width: 100%;
+	height: 2rem;
+	clear: both;
+	background: #CCC;
+}
+
+header h1{
+	font-size: 0.8rem;
+	padding-top: 0.5rem;
+	margin-left: 0.8rem;
+	float: left;
+}
+
+header div{
+	width: 32rem;
+	margin:0 auto;
+	height: 2rem;
+	font-size: 0.7rem;
+	text-align: center;
+}
+
+nav{
+	margin-left: 2rem;
+	padding-top: 0.5rem;
+	float: left;
+}
+
+nav li{
+	display: inline;
+	margin-left: 0.6rem;
+}
+
+#container{
+	width: 32rem;
+	margin: 0 auto;
+}
+
+#banner{
+	width: 32rem;
+	height: 11.3rem;
+	overflow: hidden;
+	position: relative;
+}
+
+#banner_container{
+	left: 0;
+	width: 128em;
+	position: absolute;
+}
+
+#banner1{
+	width: 32rem;
+	height: 11.3rem;
+	float: left;
+}
+
+#banner2{
+	width: 32rem;
+	height: 11.3rem;
+	float: left;
+}
+
+#services{
+	padding-top: 1rem;
+	height: 3.1rem;
+}
+
+#services li{
+	width: 3.1rem;
+	height: 3.1rem;
+	float: left;
+	margin-left: 2.45rem;
+	margin-right: 2.45rem;
+}
+
+
+
+#news{
+	padding-top: 1rem;
+	width: 100%;
+	overflow: hidden;
+	padding-bottom: 1rem;
+}
+
+
+.news_content{
+	margin-top: 0.4rem;
+	width: 32rem;
+	overflow: hidden;
+}
+
+.preview_pic{
+	margin-left: 1rem;
+	width: 3.1rem;
+	height: 3.1rem;
+	background: #CCC;
+	float: left;
+}
+
+.preview_content{
+	height: 3.1rem;
+	float: left;
+	margin-left: 1rem;
+	overflow: hidden;
+}
+
+.preview_content p{
+	margin-top: 0.2rem;
+}
+
+footer{
+	font-size: 0.6rem;
+	width: 100%;
+	height: 2rem;
+	background: #0F0F0F;
+	color: #969696;
+}
+
+footer div{
+	width: 32rem;
+	height: 2rem;
+	text-align: center;
+	margin: 0 auto;
+}
+
+footer p{
+	padding-top: 0.6rem;
+}

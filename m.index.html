@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>公司首页移动版</title>
+	<meta charset="utf-8">	
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/mobile_style.css">
+	<script type="text/javascript" src="script/myMove.js"></script>
+	<script type="text/javascript">
+		window.onload = function () {
+			var oBanner_container = document.getElementById('banner_container');
+			oBanner_container.innerHTML = oBanner_container.innerHTML + oBanner_container.innerHTML;
+			var obanner = oBanner_container.getElementsByTagName('div');
+			var bannerWidth = parseInt(getStyle(obanner[0],'width'));
+			oBanner_container.style.width = obanner.length * bannerWidth;
+
+			var curIndex = 0;
+
+			setInterval(function(){
+				curIndex--;
+				if(curIndex == -3){
+					curIndex = -1;
+					oBanner_container.style.left = 0;
+				}
+				startMove(oBanner_container,'left',curIndex * bannerWidth);
+			},2000);
+
+		}
+	</script>
+</head>
+<body>
+<!-- LOGO和导航栏，宽度占100% -->
+	<header>
+		<div>
+			<h1><a href="#">LOGO</a></h1>
+			<nav>
+				<ul>
+					<a href="#"><li>首页</li></a>
+					<a href="#"><li>走近我们</li></a>
+					<a href="#"><li>服务产品</li></a>
+					<a href="#"><li>项目展示</li></a>
+					<a href="#"><li>新闻动态</li></a>
+					<a href="#"><li>企业文化</li></a>
+					<a href="#"><li>联系我们</li></a>
+					<a href="index.html"><li>PC版</li></a>
+				</ul>
+			</nav>
+		</div>		
+	</header>
+<!-- 正文主题容器，最小640px(320rem font-size 20px下) -->
+<div id="container">	
+	<article>
+		<div id="banner">
+			<div id="banner_container">
+				<a href="#"><div id="banner1">banner图</div></a>
+				<a href="#"><div id="banner2">banner图2</div></a>
+			</div>
+		</div>
+		<div id="services">
+			<ul>
+				<a href="#"><li id="ico1">ico1</li></a>
+				<a href="#"><li id="ico2">ico2</li></a>
+				<a href="#"><li id="ico3">ico3</li></a>
+				<a href="#"><li id="ico4">ico4</li></a>
+			</ul>
+		</div>
+		<div id="news">
+			<a href="#"><div class="news_content">
+				<div class="preview_pic"></div>
+				<div class="preview_content">
+					<p class="news_title">News Title[2014-10-16]</p>
+					<p><a href="#">关于开展2014年上海市物业管理企业诚信承诺申报的通知</a></p>	
+				</div>						
+			</div></a>
+			<a href="#"><div class="news_content">
+				<div class="preview_pic"></div>
+				<div class="preview_content">
+					<p class="news_title">News Title[2014-10-16]</p>
+					<p><a href="#">关于开展2014年上海市物业管理企业诚信承诺申报的通知</a></p>	
+				</div>						
+			</div></a>
+			<a href="#"><div class="news_content">
+				<div class="preview_pic"></div>
+				<div class="preview_content">
+					<p class="news_title">News Title[2014-10-16]</p>
+					<p><a href="#">关于开展2014年上海市物业管理企业诚信承诺申报的通知</a></p>	
+				</div>						
+			</div></a>
+			<a href="#"><div class="news_content">
+				<div class="preview_pic"></div>
+				<div class="preview_content">
+					<p class="news_title">News Title[2014-10-16]</p>
+					<p><a href="#">关于开展2014年上海市物业管理企业诚信承诺申报的通知</a></p>	
+				</div>						
+			</div></a>
+			<a href="#"><div class="news_content">
+				<div class="preview_pic"></div>
+				<div class="preview_content">
+					<p class="news_title">News Title[2014-10-16]</p>
+					<p><a href="#">关于开展2014年上海市物业管理企业诚信承诺申报的通知</a></p>	
+				</div>						
+			</div></a>
+			
+
+		</div>
+	</article>
+</div>
+
+
+<!-- 页脚，宽度占100% -->
+	<footer>
+		<div>
+			<p>Copyright © 2004 - 2014 XXXXXXX管理有限公司 All Right Reserved. 沪ICP备05027423号</p>
+		</div>
+	</footer>
+
+</body>
+</html>

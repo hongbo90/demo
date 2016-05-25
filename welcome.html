@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcom</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		window.onload = function(){
+			var t = 3;
+			var timer = null;
+			var oP = document.getElementsByTagName('p')[0];
+			timer = setInterval(function(){
+				
+				t--;
+				if(t==0){
+					window.location.href='m.index.html';
+					clearInterval(timer);
+				}
+				oP.innerHTML = t;
+			},1000);
+		}
+	</script>
+</head>
+<body>
+	<h1>Welcome !!</h1>
+	倒计时：<p>3</p>
+</body>
+</html>
